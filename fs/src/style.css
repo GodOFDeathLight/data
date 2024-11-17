@@ -130,6 +130,25 @@ a {
 
 }
 
+.reportBtn button {
+    opacity: 0;
+    border-radius: 6px;
+    background: linear-gradient(to bottom, rgba(247, 247, 247, 0.187), rgba(240, 240, 240, 0.105));
+    height: 50px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 10px;
+    padding-left: 50px;
+    border: none;
+    text-transform: uppercase;
+}
+
+.reportBtn img {
+    height: 20px;
+}
+
 .downloadBtn button {
     opacity: 0;
     border-radius: 6px;
@@ -281,6 +300,22 @@ button {
     /* animation: linksBtnAn 2s ease 0.3s infinite, strtLoad 4s ease 0.5s forwards; */
     position: relative;
     overflow: hidden;
+}
+
+.links button::before,
+.reportBtn button::before {
+    opacity: 0;
+    left: -10px;
+    top: -20px;
+    content: "";
+    width: 20%;
+    height: 200%;
+    position: absolute;
+    background-color: #ffffff18;
+    box-shadow: 2px 2px 30px 30px #ffffff18;
+    rotate: 20deg;
+    animation: var(--beforestyl);
+    filter: contrast(100);
 }
 
 .links button::before,
