@@ -162,7 +162,26 @@ contact_btn.addEventListener("click", () => {
     timer = 0;
 })
 
-// btn animations 
+// btn animations
+
+let rprtBtn = document.querySelectorAll('.reportBtn button')
+dldBtn.forEach((i) => {
+    i.style.animation = `strtLoad 1s ease ${timer}s forwards, linksBtnAn 2s ease ${timer}s infinite`
+    timer += 0.3;
+    i.style.setProperty("--beforestyl", `button_shine ${2 + Math.random() * 7}s ease  ${Math.random() * 10}s infinite`);
+
+})
+
+timer = 0
+links.forEach((i) => {
+    i.style.animation = `linksBtnAn 2s ease ${timer}s infinite`
+    timer += 0.3
+    i.style.setProperty("--beforestyl", `button_shine ${2 + Math.random() * 7}s ease ${Math.random() * 10}s infinite`);
+
+})
+timer = 0
+timer = 0
+
 let dldBtn = document.querySelectorAll('.downloadBtn button')
 dldBtn.forEach((i) => {
     i.style.animation = `strtLoad 1s ease ${timer}s forwards, linksBtnAn 2s ease ${timer}s infinite`
